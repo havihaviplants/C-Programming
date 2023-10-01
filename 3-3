@@ -1,0 +1,56 @@
+/*
+
+## 문제 설명
+[문제 3-7] 변형
+세 개의 정수를 입력으로 받아 이 수들을 가장 큰 수부터 순서대로 출력하는
+프로그램을 작성하라.
+
+## 입력 예시
+4
+9
+3
+
+## 출력 예시
+9 4 3
+
+*/
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	// 세 개의 정수를 받아 가장 큰 수부터 출력
+	
+	int a, b, c; // 세 개의 정수
+	scanf("%d %d %d", &a, &b, &c); // 정수 입력
+
+	if (a > b  && a > c) { // a가 제일 큰 경우의 수
+		if (b > c) {
+			printf("%d %d %d", a, b, c);
+		}
+		else if (c > b) {
+			printf("%d %d %d", a, c, b);
+		}
+	}
+	else if (b > a  && b>c) { //b가 제일 큰 경우의 수
+		if (a > c) {
+			printf("%d %d %d", b, a, c);
+		}
+		else if (c > a) {
+			printf("%d %d %d", b, c, a);
+		}
+	}
+
+	else if (c > a && c>b) { // c가 제일 큰 경우의 수
+		if (a > b) {
+			printf("%d %d %d", c, a, b);
+		}
+		else if (b > a) {
+			printf("%d %d %d", c, b, a);
+		}
+	}
+	
+
+	return 0;
+}
