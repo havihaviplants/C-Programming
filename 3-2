@@ -1,0 +1,84 @@
+/*
+## 문제 설명
+[문제 3-9] 변형
+3개의 정수를 입력으로 받은 후, 이 수들 중 크기 순서로 중간에 있는 값에서
+가장 멀리 떨어진 수를 출력하라. 단, 떨어진 거리가 같은 경우에는 작은 값을
+출력한다.
+
+아래 “입력 예시 1”의 3개 숫자 중 크기 순서로 중간에 있는 값은 4이다.
+4에서 9까지는 5만큼 떨어져 있고, 4에서 3까지는 1만큼 떨어져 있다.
+따라서, 4에서 가장 멀리 떨어져 있는 수는 9이다.
+
+## 입력 예시 1
+3
+9
+4
+
+## 출력 예시 1
+9
+*/
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	// 3개의 정수를 입력으로 받은 후, 중간에 있는 값에서 가장 멀리 떨어진 수 출력
+	// if문 사용하는듯
+	// 떨어진 거리가 같을 경우에는 작은 값을 출력한다.
+
+	int a, b, c; // 세 개의 정수
+
+	scanf("%d %d %d", &a, &b, &c);
+
+	if (a > b && b > c || c > b && b > a) { // b가 중간 값일 때
+		if (abs(a - b) > abs(c - b)) {
+			printf("%d\n", a);
+		}
+		else if (abs(c - b) > abs(a - b)) {
+			printf("%d\n", c);
+		}
+		else if (abs(a - b) == abs(c - b) || a>c) {
+			printf("%d\n", a);
+		}
+		else if (abs(a - b) == abs(c - b) || c > a) {
+			printf("%d\n", c);
+		}
+	}
+
+
+	else if (c > a && a > b || b > a && a > c) { // a가 중간 값일 때
+		if (abs(c - a) > abs(b - a)) {
+			printf("%d\n", c);
+		}
+		else if (abs(b - a) > abs(c - a)) {
+			printf("%d\n", b);
+		}
+		else if (abs(b - a) == abs(c - a) || b > c) {
+			printf("%d\n", b);
+		}
+		else if (abs(c - a) == abs(b - a) || c > b) {
+			printf("%d\n", c);
+		}
+	}
+
+	
+
+	else if (a > c && c > b || b > c && c > a) { // c가 중간 값일 때
+		if (abs(a - c) > abs(b - c)) {
+			printf("%d\n", a);
+		}
+		else if (abs(b - c) > abs(a - c)) {
+			printf("%d\n", b);
+		}
+		else if (abs(a - c) == abs(b - c) || a > b) {
+			printf("%d\n", a);
+		}
+		else if (abs(b - c) == abs(a - c) || b > a) {
+			printf("%d\n", b);
+		}
+	}
+
+
+	return 0;
+}
