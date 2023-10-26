@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void) {
+
+/*[교제 2장 연산과 자료형]
+세 자리 자연수를 입력받아 각 자리 수를 출력하고 평균을 구하는 프로그램을 작성해보자. */
+	
+	int number; // 변수(자연수)
+	float a1; // 평균 정수부분
+	float a2; // 평균 소수부분
+
+	scanf("%d",&number); // 변수 입력
+	printf("%d, %d, %d\n", (number/100), ((number%100)/10), (number%10));
+
+	a1 = (((number/100)+((number%100)/10)+(number%10)) / 3.0);
+	a2 = (((number/100)+((number%100)/10)+(number%10)) % 3);
+
+	float average = a1; // 평균
+
+	printf("%.2lf", average);
+	
+	return 0;
+
+}
