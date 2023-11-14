@@ -1,0 +1,36 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        for (int j = 0; j < n-i-1; j++) {
+            // 현재 원소와 다음 원소를 비교하여 작은 값을 앞으로 이동
+            if (arr[j] > arr[j+1]) {
+                // 두 값을 교환
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Before sorting: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    // 버블 정렬 호출
+    bubbleSort(arr, n);
+
+    printf("\nAfter sorting: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
