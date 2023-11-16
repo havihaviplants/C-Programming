@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void) {
+
+	unsigned int a;
+
+	a = 4294967295;
+	printf("%d\n", a);
+
+	a = -1;
+	printf("%u\n", a);
+
+	return 0;
+
+}
