@@ -1,0 +1,31 @@
+//컴퓨터공학과, 20205104, 이효동
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+/* 읽어 들인 정숫값의 부호 판정 (원하는 만큼 반복) */
+
+int main(void) 
+{
+	int retry; // 처리를 계속 할 것인지?
+
+	do{
+		int no;
+
+		printf("정수를 입력하세요 : ");
+		scanf("%d", &no);
+
+		if(no == 0)
+			puts("이 수는 0입니다.");
+		else if(no > 0)
+			puts("이 수는 양수입니다.");
+		else
+			puts("이 수는 음수입니다.");
+
+		printf("한 번 더? [yes...0/No...9] : ");
+		scanf("%d", &retry);
+	}while(retry == 0);
+
+	return 0;
+
+}
