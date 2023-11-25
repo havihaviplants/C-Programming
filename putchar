@@ -1,0 +1,22 @@
+//컴퓨터공학과, 20205104, 이효동
+
+/* 읽어들인 정수 개수만큼 *를 연속 출력*/
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void) {
+	
+	int no;
+	
+	printf("양의 정수 : ");
+	scanf("%d", &no);
+
+	if(no>=1) {
+		while (no-- > 0)
+			putchar('*');
+		putchar('\n');
+	}
+
+	return 0;
+}
