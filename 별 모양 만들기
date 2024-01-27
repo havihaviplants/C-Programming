@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+
+	for (int i = 0; i < 5; i++)
+	{
+		
+		for (int j = 0; j < 5; j++)
+		{
+			
+			if (i == j || i+j==4) 
+				printf("*");// 간격을 띄우는 방법을 잘 모르겠음... 현재 고민 중...
+
+			else 
+				printf(" "); // 해당되지 않는 경우에는 else로 처리하여 \n로 공백을 채워넣으면 됨!!!
+			
+		}
+		printf("\n");
+	}
+
+	return 0;
+
+}
