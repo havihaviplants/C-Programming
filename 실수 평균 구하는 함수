@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+
+	double res;
+
+	res = average(1.5, 3.4);
+
+	double average(a, b)
+	{
+		double temp;
+		temp = a + b;
+		return (temp / 2.0);
+	}
