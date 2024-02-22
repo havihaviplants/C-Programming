@@ -1,0 +1,23 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			if (i + j == 4 || i == j)
+				printf("*"); // 별 모양은 나오는데 좌측으로 쏠려 있어서 x자 모양으로 구현이 안 되는 상태... 어떻게 하면 이걸 띄워놓을 수 있는지 고민 필요!
+			else
+				printf(" "); // if 문에서 조건에 맞는 *만 출력했기 때문에 나머지 공간은 출력 자체가 되지 않은 것이었음!, if 조건문을 제외하고 나머지 부분에 대해서는 " " 이렇게 띄어쓰기로 표시 필요! 
+		}
+
+		printf("\n");
+
+	}
+
+	return 0;
+
+}
