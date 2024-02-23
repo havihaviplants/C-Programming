@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+
+	int primenumber;
+	int n;
+
+	scanf_s("%d", &primenumber);
+
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			if (primenumber % primenumber == 0 && primenumber > (primenumber))
+				printf("%d\n", primenumber);
+			else if (primenumber % (primenumber-1))
+				printf(" ");
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
