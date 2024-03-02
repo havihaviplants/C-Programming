@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	double kg; // 몸무게
+	double cm; // 신장
+
+	double BMI; // BMI 지수
+
+	printf("몸무게(kg)와 키(cm) 입력 : ");
+	scanf_s("%lf %lf", &kg, &cm);
+
+	BMI = kg / (cm * cm); // BMI는 몸무게를 키의 제곱으로 나누어 구한다.
+
+	if (BMI > 25 || BMI < 20)
+		printf("체중 관리가 필요합니다.");
+	else if (25 > BMI >= 20)
+		printf("표준입니다.");
+
+
+	return 0;
+
+}
