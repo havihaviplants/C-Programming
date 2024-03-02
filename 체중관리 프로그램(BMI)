@@ -15,7 +15,7 @@ int main(void)
 
 	if (BMI > 25 || BMI < 20)
 		printf("체중 관리가 필요합니다.");
-	else if (25 > BMI >= 20)
+	else if (BMI <= 25 && BMI >= 20)
 		printf("표준입니다.");
 
 
