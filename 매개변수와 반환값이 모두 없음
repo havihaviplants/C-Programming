@@ -1,0 +1,28 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+void print_line(void);
+
+int main(void)
+{
+
+	print_line();
+	printf("20205104 이효동 컴퓨터공학 2.7\n");
+	print_line();
+
+	return 0;
+
+}
+
+void print_line(void)
+{
+	int i;
+
+	for (i = 0; i < 50; i++)
+	{
+		printf("-");
+	}
+
+	printf("\n");
+
+}
