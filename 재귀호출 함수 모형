@@ -1,0 +1,18 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+void fruit(void); // 함수 선언
+
+int main(void) 
+{
+	fruit(); // 함수 호출
+
+	return 0;
+
+}
+
+void fruit(void) // 함수 정의
+{
+	printf("apple\n");
+	fruit();
+}
