@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// 재귀 함수를 이용하여 1부터 n까지의 합을 계산하는 함수
+int sum(int n) {
+    // 기저 사례: n이 1 이하인 경우, 그 값이 그대로 반환됩니다.
+    if (n <= 1)
+        return n;
+    // 재귀 호출: 현재 값(n)과 이전 값(sum(n-1))의 합을 반환합니다.
+    else
+        return n + sum(n - 1);
+}
+
+int main() {
+    int n;
+    printf("정수를 입력하세요: ");
+    scanf("%d", &n);
+    
+    // 1부터 n까지의 합을 출력
+    printf("1부터 %d까지의 합: %d\n", n, sum(n));
+    
+    return 0;
+}
